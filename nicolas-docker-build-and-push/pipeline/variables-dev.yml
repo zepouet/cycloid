@@ -14,7 +14,7 @@ aws_secret_key: ""
 code_build_args: null
 code_build_context: .
 code_dockerfile_location: Dockerfile
-code_git_branch: master
+code_git_branch: main
 code_git_private_key: ((niconfig.ssh_key))
 code_git_repository: git@github.com:zepouet/config-dockerbuild.git
 customer: accenture-lab
