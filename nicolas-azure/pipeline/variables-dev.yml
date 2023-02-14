@@ -23,7 +23,7 @@ env: dev
 organization: accenture-lab
 project: nicolas-azure
 stack_git_branch: master
-terraform_resource_group_name: accenture-lab-terraform
+terraform_resource_group_name: tfstate
 terraform_storage_access_key: ((nicolas-azure-subscription.storage-account-key))
 terraform_storage_account_name: ((nicolas-azure-subscription.storage-account-name))
 terraform_storage_container_name: accenture-lab
