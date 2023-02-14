@@ -12,24 +12,28 @@
 module "vm" {
   source = "./module-vm-linux"
 
-  azure_location                           = var.azure_location
-  customer                                 = var.customer
-  delete_os_disk_on_termination            = true
-  disable_linux_password_authentification  = false
-  disk_managed_type                        = "Standard_LRS"
-  disk_name                                = "${var.customer}-${var.project}-${var.env}-disk"
-  disk_size                                = 5
-  env                                      = var.env
-  file_content                             = ""
-  image_id                                 = ""
-  image_offer                              = "debian-10"
-  image_publisher                          = "debian"
-  image_sku                                = "10-cloudinit-gen2"
-  image_version                            = "latest"
-  instance_extra_tags                      = {}
-  instance_name                            = "${var.customer}-${var.project}-${var.env}-vm"
-  ip_config_name                           = "${var.customer}-${var.project}-${var.env}-ip_config"
-  network_extra_tags                       = {}
+  azure_location                          = var.azure_location
+  customer                                = var.customer
+  delete_os_disk_on_termination           = true
+  disable_linux_password_authentification = false
+  disk_managed_type                       = "Standard_LRS"
+  disk_name                               = "${var.customer}-${var.project}-${var.env}-disk"
+  disk_size                               = 5
+  env                                     = var.env
+  file_content                            = ""
+  image_id                                = ""
+  image_offer                             = "debian-10"
+  image_publisher                         = "debian"
+  image_sku                               = "10-cloudinit-gen2"
+  image_version                           = "latest"
+  instance_extra_tags = {
+  }
+
+  instance_name  = "${var.customer}-${var.project}-${var.env}-vm"
+  ip_config_name = "${var.customer}-${var.project}-${var.env}-ip_config"
+  network_extra_tags = {
+  }
+
   network_interface_name                   = "${var.customer}-${var.project}-${var.env}-nic"
   network_security_group_name              = "${var.customer}-${var.project}-${var.env}-sg"
   os_admin_password                        = "nico-secrets/password"
@@ -48,8 +52,10 @@ module "vm" {
   security_rule_protocol                   = "Tcp"
   security_rule_source_address_prefix      = "*"
   security_rule_source_port_range          = "*"
-  sg_extra_tags                            = {}
-  subnet_id                                = ""
-  vm_size                                  = "Standard_DS1_v2"
+  sg_extra_tags = {
+  }
+
+  subnet_id = ""
+  vm_size   = "Standard_DS1_v2"
 }
 

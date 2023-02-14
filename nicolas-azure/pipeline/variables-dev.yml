@@ -8,12 +8,12 @@
 #
 # Any extra variables not found in the original file have been ignored.
 #
-azure_client_id: ""
-azure_client_secret: ""
+azure_client_id: ((nicolas-azure-subscription.client-id))
+azure_client_secret: ((nicolas-azure-subscription.password))
 azure_env: public
 azure_location: West Europe
-azure_subscription_id: ""
-azure_tenant_id: ""
+azure_subscription_id: ((nicolas-azure-subscription.subscription-id))
+azure_tenant_id: ((nicolas-azure-subscription.tenant))
 config_git_branch: main
 config_git_private_key: ((niconfig.ssh_key))
 config_git_repository: git@github.com:zepouet/cycloid.git
