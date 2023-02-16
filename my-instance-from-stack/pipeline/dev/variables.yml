@@ -7,6 +7,8 @@ code_git_branch: code
 git_repository: 'git@github.com:zepouet/my-cycloid-stack.git'
 config_git_branch: config
 stack_git_branch: stacks
+api_key: ((custom_cyclobot-api-key.key))
+api_url: 'https://http-api.cycloid.io'
 terraform_storage_container_path: my-instance-from-stack/dev
 terraform_storage_container_name: accenturelab
 terraform_storage_access_key: ((nicolas-azure-subscription.storage-account-key))
