@@ -5,6 +5,7 @@ git_ssh_key: ((niconfig.ssh_key))
 code_git_public_repository: 'https://github.com/cycloid-community-catalog/docs-step-by-step-stack.git'
 code_git_branch: code
 git_repository: 'git@github.com:zepouet/my-cycloid-stack.git'
+config_git_branch: config
 stack_git_branch: stacks
 terraform_storage_container_path: my-instance-from-stack/dev
 terraform_storage_container_name: accenturelab
